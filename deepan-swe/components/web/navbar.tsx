@@ -15,11 +15,16 @@ import { Button, buttonVariants } from "../ui/button";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { AboutMeLink, SocialMediaLink } from "@/types";
 import { LinkedInIcon, GithubIcon } from "@/data/icons";
+import HamberBurgerMenu from "./hamburgerMenu";
 
 
 
 export default function Navbar() {
 
+    // change the following to your name 
+    const name = "Deepan Patel"
+
+    // configure social links here 
     const socialComp: SocialMediaLink[] = [
         {
             name: "Linkedin",
@@ -36,7 +41,8 @@ export default function Navbar() {
 
     ]
 
-    const components: AboutMeLink[] = [
+    // configure main pages here
+    const aboutMe: AboutMeLink[] = [
         {
             title: "Work Experience",
             href: "/work-experience",
@@ -59,11 +65,14 @@ export default function Navbar() {
     ]
 
     return (
-        <div className="flex flex-row justify-between m-5">
-            <div className="flex text-xl font-bold"> Deepan Patel </div>
+        <div className="flex flex-row justify-between m-5 ">
+            <Link href="/">
+                <div className="flex text-xl font-bold"> {name} </div>
+            </Link>
+
             {/* nav links and navigation bar */}
 
-            <div className="flex">
+            <div className="hidden md:flex">
                 <NavigationMenu>
                     <NavigationMenuList>
                         <NavigationMenuItem>
@@ -94,10 +103,10 @@ export default function Navbar() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem className="hidden md:flex">
-                            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                    {components.map((component) => (
+                                    {aboutMe.map((component) => (
                                         <ListItem
                                             key={component.title}
                                             title={component.title}
@@ -121,9 +130,14 @@ export default function Navbar() {
             </div>
 
             {/* action button */}
-            <div className="flex gap-2">
+            <div className="hidden md:flex gap-2">
                 <Button>Coffee Chat</Button>
                 <ThemeToggle />
+            </div>
+
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+                <HamberBurgerMenu aboutMe={aboutMe} />
             </div>
         </div>
     );
