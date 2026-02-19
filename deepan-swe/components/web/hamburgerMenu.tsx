@@ -3,6 +3,7 @@
 import { Menu } from "lucide-react";
 import * as React from "react"
 import Link from "next/link"
+import { Coffee } from "lucide-react";
 
 import {
     Drawer,
@@ -57,7 +58,10 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                         </ul>
                     </div>
                     <DrawerFooter>
-                        <Button>Coffee Chat</Button>
+                        <Button>
+                            <Coffee data-icon="inline-end" />
+                            Coffee Chat
+                        </Button>
                         <DrawerClose asChild>
                             <Button variant="outline">Go Back</Button>
                         </DrawerClose>
