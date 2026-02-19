@@ -19,7 +19,7 @@ import { LinkedInIcon, GithubIcon } from "@/data/icons";
 import HamberBurgerMenu from "./hamburgerMenu";
 
 // importing data from dataconfig.ts
-import { name, socialComp, aboutMe } from "@/data/dataconfig";
+import { ContactInfo, socialComp, aboutMe } from "@/data/dataconfig";
 import { Coffee } from "lucide-react";
 import { cn } from "@/lib/utils"
 
@@ -28,7 +28,7 @@ export default function Navbar() {
     return (
         <div className="flex flex-row justify-between p-10 ">
             <Link href="/">
-                <div className="flex text-xl font-bold"> {name} </div>
+                <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
             </Link>
 
             {/* nav links and navigation bar */}
@@ -102,7 +102,7 @@ export default function Navbar() {
                                         "rounded-l-none"
                                     )}
                                 >
-                                    <Link href="/docs">Clone</Link>
+                                    <Link target="_blank" href="https://github.com/deepan-patel/deepan-swe">Clone Website</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>

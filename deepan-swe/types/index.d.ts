@@ -14,3 +14,10 @@ export type AboutMeLink = {
     href: string;
     description: string;
 }
+
+// Feel free to add more attributes like phone number here
+export type ContactInfo = {
+    name: string;
+    email: string;
+    address: string;
+}

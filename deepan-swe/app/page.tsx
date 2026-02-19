@@ -1,3 +1,4 @@
+import Hero from "@/components/web/hero";
 import Image from "next/image";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
 
     <div className="flex min-h-screen items-center justify-center">
       <main>
-        <p>this si the content of the page</p>
+        <Hero />
       </main>
 
     </div>

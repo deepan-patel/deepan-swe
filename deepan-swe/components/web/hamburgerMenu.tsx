@@ -27,7 +27,7 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
         <Drawer>
 
             <div className="flex flex-row gap-2">
-                <ThemeToggle />
+
                 <DrawerTrigger asChild>
                     <span className="flex">
                         <Menu size={35} />
@@ -57,7 +57,7 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                             ))}
                         </ul>
                     </div>
-                    <DrawerFooter>
+                    <DrawerFooter className="flex flex-row justify-center">
                         <Button>
                             <Coffee data-icon="inline-end" />
                             Coffee Chat
@@ -65,6 +65,7 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                         <DrawerClose asChild>
                             <Button variant="outline">Go Back</Button>
                         </DrawerClose>
+                        <ThemeToggle />
                     </DrawerFooter>
                 </div>
             </DrawerContent>

@@ -4,7 +4,11 @@ import type { SocialMediaLink, AboutMeLink } from "@/types";
 // Navigation configurations
 
 // Your name
-export const name = "Deepan Patel";
+export const ContactInfo = {
+    name: "Deepan Patel",
+    email: "deepanpatel189@gmail.com",
+    address: "Toronto, ON",
+}
 
 // Social links Nav Comp
 export const socialComp: SocialMediaLink[] = [
@@ -40,4 +44,12 @@ export const aboutMe: AboutMeLink[] = [
         description: "Learn more about my hobbies and interests.",
     },
 ];
+
+// Hero Section
+export const HeroInfo = {
+    badge: "Open to Work",
+    title: "Turning Complex Problems Into Clean,",
+    highlightedPhrase: "Scalable Software.",
+    description: "Passionate developer committed to solving complex problems and continuously expanding my expertise in software development. Dedicated to lifelong learning and building scalable, high-quality solutions.",
+}
 
