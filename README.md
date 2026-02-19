@@ -15,7 +15,16 @@
 </p>
 <p align="center">Author: https://github.com/deepan-patel/</p>
 
+---
 
+# ⭐ Contribute & Feature Requests
+
+If you'd like to see additional features added to this portfolio:
+
+- 📝 **Open an Issue** describing the feature or enhancement  
+- ⭐ **Star the repository** to support the project  
+
+Your feedback and support help prioritize improvements and future updates.
 
 ---
 
