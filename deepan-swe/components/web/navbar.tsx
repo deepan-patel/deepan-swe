@@ -26,106 +26,109 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
 
     return (
-        <div className="flex flex-row justify-between p-10 ">
-            <Link href="/">
-                <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
-            </Link>
+        <div className="fixed top-0 left-0 w-full z-50 bg-background shadow-md">
+            <div className="flex flex-row justify-between p-5 ">
+                <Link href="/">
+                    <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
+                </Link>
 
-            {/* nav links and navigation bar */}
+                {/* nav links and navigation bar */}
 
-            <div className="hidden md:flex ">
+                <div className="hidden md:flex ">
 
-                <NavigationMenu>
-                    <div className="rounded-xl border bg-muted p-1 shadow-sm">
-                        <NavigationMenuList className="gap-0">
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger
-                                    className={cn(
-                                        navigationMenuTriggerStyle(),
-                                        "rounded-l-lg rounded-r-none"
-                                    )}
-                                >
-                                    Social Links
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="w-96">
+                    <NavigationMenu>
+                        <div className="rounded-xl border bg-muted p-1 shadow-sm">
+                            <NavigationMenuList className="gap-0">
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger
+                                        className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "rounded-l-lg rounded-r-none"
+                                        )}
+                                    >
+                                        Social Links
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="w-96">
 
-                                        <div>
-                                            {socialComp.map((component) => (
+                                            <div>
+                                                {Object.entries(socialComp).map(([key, comp]) => (
 
-                                                <div className="flex flex-row" key={component.name}>
-                                                    <div>
-                                                        <component.icon width={50} height={50} />
+                                                    <div className="flex flex-row" key={key}>
+                                                        <div>
+                                                            <comp.icon width={50} height={50} />
+                                                        </div>
+                                                        <ListItem
+
+                                                            title={key}
+                                                            href={comp.href}
+                                                            className="grow"
+
+
+                                                        >
+                                                            {comp.description}
+                                                        </ListItem>
                                                     </div>
-                                                    <ListItem
-
-                                                        title={component.name}
-                                                        href={component.href}
-                                                        className="grow"
-
-
-                                                    >
-                                                        {component.description}
-                                                    </ListItem>
-                                                </div>
+                                                ))}
+                                            </div>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem className="hidden md:flex">
+                                    <NavigationMenuTrigger
+                                        className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "rounded-r-none rounded-l-none"
+                                        )}>
+                                        About Me
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                            {aboutMe.map((component) => (
+                                                <ListItem
+                                                    key={component.title}
+                                                    title={component.title}
+                                                    href={component.href}
+                                                >
+                                                    {component.description}
+                                                </ListItem>
                                             ))}
-                                        </div>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem className="hidden md:flex">
-                                <NavigationMenuTrigger
-                                    className={cn(
-                                        navigationMenuTriggerStyle(),
-                                        "rounded-r-none rounded-l-none"
-                                    )}>
-                                    About Me
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                        {aboutMe.map((component) => (
-                                            <ListItem
-                                                key={component.title}
-                                                title={component.title}
-                                                href={component.href}
-                                            >
-                                                {component.description}
-                                            </ListItem>
-                                        ))}
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild
-                                    className={cn(
-                                        navigationMenuTriggerStyle(),
-                                        "rounded-l-none"
-                                    )}
-                                >
-                                    <Link target="_blank" href="https://github.com/deepan-patel/deepan-swe">Clone Website</Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                        <NavigationMenuViewport />
-                    </div>
-                </NavigationMenu>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink asChild
+                                        className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "rounded-l-none"
+                                        )}
+                                    >
+                                        <Link target="_blank" href="https://github.com/deepan-patel/deepan-swe">Clone Website</Link>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                            <NavigationMenuViewport />
+                        </div>
+                    </NavigationMenu>
 
-            </div>
+                </div>
 
-            {/* action button */}
-            <div className="hidden md:flex gap-2">
-                <Button>
-                    <Coffee data-icon="inline-end" />
-                    Coffee Chat
-                </Button>
-                <ThemeToggle />
-            </div>
+                {/* action button */}
+                <div className="hidden md:flex gap-2">
+                    <ThemeToggle />
 
-            {/* Mobile Menu */}
-            <div className="md:hidden">
-                <HamberBurgerMenu aboutMe={aboutMe} />
-            </div>
-        </div >
+                    <Button>
+                        <Coffee data-icon="inline-end" />
+                        Coffee Chat
+                    </Button>
+                </div>
+
+                {/* Mobile Menu */}
+                <div className="md:hidden">
+                    <HamberBurgerMenu aboutMe={aboutMe} />
+                </div>
+            </div >
+        </div>
     );
 }
 

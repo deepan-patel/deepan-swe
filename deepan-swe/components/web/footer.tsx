@@ -28,13 +28,13 @@ export default function Footer() {
                         Created a personal portfolio website to showcase my work and support others in their learning and professional growth.
                     </p>
                     <div className="flex space-x-5 pt-2">
-                        {socialComp.map((social) => (
+                        {Object.entries(socialComp).map(([key, comp]) => (
                             <Link
-                                key={social.name}
-                                href={social.href}
+                                key={key}
+                                href={comp.href}
                                 className="hover:scale-110"
                             >
-                                <social.icon width={30} height={30} />
+                                <comp.icon width={30} height={30} />
                             </Link>
                         ))}
                     </div>
@@ -114,7 +114,7 @@ export default function Footer() {
                         </HoverCardTrigger>
                         <HoverCardContent className="flex flex-col gap-0.5">
                             <div className="font-semibold">@deepan-patel</div>
-                            <Link className="text-sm hover:text-orange-400" target="_blank" href="https://www.linkedin.com/in/deepan-patel188/">
+                            <Link className="text-sm hover:text-orange-400" target="_blank" href={socialComp.Linkedin.href}>
                                 Follow me on Linkedin.
                             </Link>
                             <div className="text-muted-foreground mt-1 text-xs">
