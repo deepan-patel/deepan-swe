@@ -20,10 +20,10 @@ const TimelineItemContent = memo(function TimelineItemContent({ item }: Timeline
                 {item.responsibilities.map((responsibility, idx) => (
                     <li
                         key={`${item.id}-resp-${idx}`}
-                        className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400"
+                        className="flex text-left gap-3 text-sm text-slate-600 dark:text-slate-400"
                     >
                         <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="leading-relaxed">{responsibility}</span>
+                        <span className="leading-relaxed flex-grow">{responsibility}</span>
                     </li>
                 ))}
             </ul>

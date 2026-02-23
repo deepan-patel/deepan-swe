@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-background shadow-md">
+        <div className="fixed top-0 left-0 w-full z-50 bg-background shadow-md p-5">
             <div className="flex flex-row justify-between p-5 ">
                 <Link href="/">
                     <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
@@ -103,7 +103,7 @@ export default function Navbar() {
                                             "rounded-l-none"
                                         )}
                                     >
-                                        <Link target="_blank" href="https://github.com/deepan-patel/deepan-swe">Clone Website</Link>
+                                        <Link target="_blank" href="/resume/Deepan_Patel_Resume.pdf">Resume</Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -117,11 +117,14 @@ export default function Navbar() {
                 <div className="hidden md:flex gap-2">
                     <ThemeToggle />
 
-                    <Button>
-                        <Coffee data-icon="inline-end" />
-                        Coffee Chat
-                    </Button>
+                    <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat">
+                        <Button>
+                            <Coffee data-icon="inline-end" />
+                            Coffee Chat
+                        </Button>
+                    </Link>
                 </div>
+
 
                 {/* Mobile Menu */}
                 <div className="md:hidden">

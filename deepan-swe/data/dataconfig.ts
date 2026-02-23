@@ -1,5 +1,5 @@
 import { LinkedInIcon, GithubIcon } from "./icons"; // adjust the path
-import type { SocialMediaLink, SocialItem, AboutMeLink, TimelineItemData } from "@/types";
+import type { SocialMediaLink, SocialItem, AboutMeLink, TimelineItemData, ProjectItemData, EducationItemData } from "@/types";
 import { CodeXml } from "lucide-react";
 
 // Navigation configurations
@@ -8,7 +8,7 @@ import { CodeXml } from "lucide-react";
 export const ContactInfo = {
     name: "Deepan Patel",
     jobTitle: "Software Engineer",
-    email: "deepanpatel189@gmail.com",
+    email: "deepanpatel188@gmail.com",
     address: "Toronto, ON",
 }
 
@@ -35,9 +35,9 @@ export const aboutMe: AboutMeLink[] = [
         description: "Learn more about my professional work experience.",
     },
     {
-        title: "Projects",
-        href: "/projects",
-        description: "Learn more about my projects.",
+        title: "Education & Projects",
+        href: "/education-and-projects",
+        description: "Learn more about my projects and education.",
     },
     {
         title: "Hobbies & Interests",
@@ -98,4 +98,74 @@ export const timelineData: TimelineItemData[] = [
         ],
         skills: ["Payment Gateways", "Java", "Documentation", "Training and Mentoring"],
     },
+];
+
+// Project Data
+export const projectData: ProjectItemData[] = [
+    {
+        title: "Easy Eng",
+        type: "Full Stack Elearning Platform",
+        url: "https://www.easyeng.ca",
+        description: [
+            "Served as a Founding Engineer for Easy Eng, building the foundational full-stack architecture for a STEM eLearning platform that enabled non - technical founders to launch and scale a production - ready product used by 100 + students.",
+            "Architected and delivered the platform using Next.js 14, React, Prisma and TypeScript, integrating Supabase for authentication and database management and Resend for automated React-based email notifications to improve student engagement and operational efficiency.",
+
+        ],
+        stack: ["TypeScript", "Next.js", "React", "Prisma", "Supabase", "Postgres", "Resend", "Vercel"],
+    },
+    {
+        title: "IBM - Pepper the Robot",
+        type: "Full stack",
+        url: "https://www.youtube.com/watch?v=VkVgoXNhNo4",
+        description: [
+            "Led development of a robot-driven employee engagement platform to justify the ROI of Pepper by transforming it from a novelty lab asset into a data-generating workplace engagement solution aligned with return-to-office strategy.",
+            "Deployed a full-stack solution using Remix (frontend), Go (backend), and IBM Watsonx for sentiment analysis, converting real-time employee interactions into actionable leadership insights."
+        ],
+        stack: ["Go", "Javascript", "Remix", "WatsonX", "RHEL"],
+    },
+    {
+        title: "Protfolio Website",
+        type: "Front-end",
+        url: "deepan-swe.vercel.app",
+        description: [
+            "Developed a modern portfolio website to showcase my technical skills and projects while providing a reusable template for others to build their own professional presence.",
+            "Built using Next.js 16, Tailwind CSS, shadcn/ui, and Framer Motion to deliver a responsive, animated, and scalable user experience."
+        ],
+        stack: ["Typescript", "NextJs", "Tailwindcss", "Shadcn/ui", "Framer Motion", "Vercel"],
+    },
+
+    {
+        title: "Rendezvous - Event Finder",
+        type: "Mobile App",
+        url: "https://github.com/deepan-patel/Rendezvous",
+        description: [
+            "Rendezvous is a mobile event platform that allows users to create, discover, and join events through an interactive map and social event management features.",
+            "Built using Flutter (Dart) with Firebase (Authentication, Firestore, Storage, and Cloud Functions) and Google Maps for real-time, location-based event browsing and notifications."
+        ],
+        stack: ["Flutter", "Dart", "Google Maps API", "Firebase"],
+    },
+];
+
+// Education
+export const educationData: EducationItemData[] = [
+    {
+        title: "Ontario Tech University",
+        subtitle: "Bachelor of Computer Science",
+        duration: "Sep 2021 — Apr 2026",
+        url: "https://ontariotechu.ca/"
+    },
+    {
+        title: "Technical Specialist - Experienced",
+        subtitle: "IBM",
+        duration: "November 2025",
+        type: "Certification",
+        url: "https://www.credly.com/badges/f32b591e-f8c9-4dd9-a7b7-2b0521811392/linked_in_profile"
+    },
+    {
+        title: "Watsonx.ai Technical Essentials",
+        subtitle: "IBM",
+        duration: "June 2025",
+        type: "Certification",
+        url: "https://www.credly.com/badges/b659e1c5-bef7-43ca-827b-e0d9fcd85b49/linked_in_profile"
+    }
 ];

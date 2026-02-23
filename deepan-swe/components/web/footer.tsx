@@ -74,10 +74,10 @@ export default function Footer() {
 
                         <li>
                             <Link
-                                href="/faqs"
+                                href="https://github.com/deepan-patel/deepan-swe"
                                 className="text-gray-600 dark:text-gray-300 dark:hover:text-orange-400 hover:text-orange-600 transition-colors duration-300"
                             >
-                                FAQs
+                                Clone Website
                             </Link>
                         </li>
 

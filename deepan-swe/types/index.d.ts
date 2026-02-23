@@ -47,3 +47,21 @@ export type ProfessionalTimelineProps = {
     defaultExpandedIds?: string[]; // defaults to all items expanded
     expandMode?: ExpandMode;       // "multi" | "single" (default: "multi")
 }
+
+// Projects
+export type ProjectItemData = {
+    title: string;
+    type: string;
+    url: string;
+    description: string[];
+    stack: string[];
+}
+
+// Education
+export type EducationItemData = {
+    title: string;
+    subtitle: string;
+    type?: string;
+    duration: string;
+    url: string;
+}

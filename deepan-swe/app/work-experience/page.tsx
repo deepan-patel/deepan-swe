@@ -38,11 +38,8 @@ export default function WorkExperiencePage() {
                         <LinkedInIcon width={25} height={25} />
                         View Linkedin
                     </Link>
-
-
-
-
                 </div>
+
             </div>
             <div className="relative z-0 mt-20">
                 <OrbitingSkills />
