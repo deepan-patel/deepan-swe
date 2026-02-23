@@ -47,6 +47,7 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                         <ul className="text-center flex flex-col gap-2">
                             <ListItem href="/" title="Home"></ListItem>
 
+
                             {aboutMe.map((component) => (
                                 <ListItem
                                     key={component.title}
@@ -58,10 +59,12 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                         </ul>
                     </div>
                     <DrawerFooter className="flex flex-row justify-center">
-                        <Button>
-                            <Coffee data-icon="inline-end" />
-                            Coffee Chat
-                        </Button>
+                        <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat">
+                            <Button>
+                                <Coffee data-icon="inline-end" />
+                                Coffee Chat
+                            </Button>
+                        </Link>
                         <DrawerClose asChild>
                             <Button variant="outline">Go Back</Button>
                         </DrawerClose>
@@ -83,12 +86,14 @@ function ListItem({
     return (
         <li {...props}>
 
-            <Link href={href}>
-                <div className="flex flex-col gap-1 text-sm">
-                    <div className="leading-none font-medium">{title}</div>
-                    <div className="text-muted-foreground line-clamp-2">{children}</div>
-                </div>
-            </Link>
+            <DrawerClose asChild>
+                <Link href={href}>
+                    <div className="flex flex-col gap-1 text-sm">
+                        <div className="leading-none font-medium">{title}</div>
+                        <div className="text-muted-foreground line-clamp-2">{children}</div>
+                    </div>
+                </Link>
+            </DrawerClose>
 
         </li>
     )
