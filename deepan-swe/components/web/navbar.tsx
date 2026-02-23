@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-background shadow-md p-5">
+        <div className="top-0 sticky bg-background shadow-md p-5">
             <div className="flex flex-row justify-between p-5 ">
                 <Link href="/">
                     <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>

@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <div className="relative z-10 pt-32 sm:pt-40 px-4 text-center mb-10">
+        <div className="pt-32 sm:pt-40 px-4 text-center mb-10">
 
             {/* Circular Profile Image */}
-            <div className="relative flex justify-center">
-                <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl mt-12 sm:-mt-16">
+            <div className="flex justify-center">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl mt-12 sm:-mt-16">
                     <Image
                         src="/images/landingImage.jpg"
                         alt="Profile"
