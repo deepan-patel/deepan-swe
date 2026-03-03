@@ -41,7 +41,7 @@ export default function Hero() {
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Link href="/about-me" className={buttonVariants({
+                    <Link href="/hobbies-interests" className={buttonVariants({
                         variant: "outline",
                         className: "w-full sm:w-auto"
                     })}>
