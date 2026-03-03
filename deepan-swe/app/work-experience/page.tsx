@@ -8,7 +8,7 @@ import { LinkedInIcon } from "@/data/icons";
 
 export default function WorkExperiencePage() {
     return (
-        <div className="relative z-10 pt-10 sm:pt-40 px-4 text-center mb-10">
+        <div className="px-4 text-center mb-10">
 
 
             {/* main title */}
@@ -34,6 +34,7 @@ export default function WorkExperiencePage() {
 
                     <Link target="_blank" href={socialComp.Linkedin.href} className={buttonVariants({
                         variant: "default",
+                        className: "w-full sm:w-auto"
                     })}>
                         <LinkedInIcon width={25} height={25} />
                         View Linkedin
