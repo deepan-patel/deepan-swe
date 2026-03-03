@@ -137,7 +137,7 @@ function LogRow({
         className="w-full p-4 text-left transition-colors hover:bg-muted/50 active:bg-muted/70"
         whileHover={{ backgroundColor: "rgba(0,0,0,0.02)" }}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <motion.div
             animate={{ rotate: expanded ? 180 : 0 }}
             transition={{ duration: 0.2 }}
@@ -148,31 +148,31 @@ function LogRow({
 
           <Badge
             variant="secondary"
-            className={`flex-shrink-0 capitalize ${levelStyles[log.level]}`}
+            className={`flex-shrink-0 capitalize text-[10px] sm:text-xs px-1 sm:px-2.5 ${levelStyles[log.level]}`}
           >
             {log.level}
           </Badge>
 
-          <time className="w-20 flex-shrink-0 font-mono text-xs text-muted-foreground">
+          <time className="hidden md:block w-20 flex-shrink-0 font-mono text-xs text-muted-foreground">
             {formattedTime}
           </time>
 
-          <span className="flex-shrink-0 min-w-max text-sm font-medium text-foreground">
+          <span className="hidden sm:block flex-shrink-0 min-w-max text-xs sm:text-sm font-medium text-foreground">
             {log.service}
           </span>
 
-          <p className="flex-1 truncate text-sm text-muted-foreground">
+          <p className="flex-1 truncate text-xs sm:text-sm text-muted-foreground">
             {log.message}
           </p>
 
           <span
-            className={`flex-shrink-0 font-mono text-sm font-semibold ${statusStyles[log.status] ?? "text-muted-foreground"
+            className={`hidden sm:block flex-shrink-0 font-mono text-xs sm:text-sm font-semibold ${statusStyles[log.status] ?? "text-muted-foreground"
               }`}
           >
             {log.status}
           </span>
 
-          <span className="w-16 flex-shrink-0 text-right font-mono text-xs text-muted-foreground">
+          <span className="hidden lg:block w-16 flex-shrink-0 text-right font-mono text-xs text-muted-foreground">
             {log.duration}
           </span>
         </div>
@@ -198,7 +198,19 @@ function LogRow({
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm mt-4">
+                <div>
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    Service
+                  </p>
+                  <p className="font-mono text-foreground">{log.service}</p>
+                </div>
+                <div>
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    Status
+                  </p>
+                  <p className="font-mono text-foreground">{log.status}</p>
+                </div>
                 <div>
                   <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                     Duration
@@ -414,12 +426,12 @@ export function InteractiveLogsTable() {
     filters.level.length + filters.service.length + filters.status.length;
 
   return (
-    <main className="h-screen w-full bg-background">
+    <div className="w-full max-w-5xl mx-auto h-[400px] sm:h-[600px] border rounded-xl shadow-sm bg-background flex flex-col overflow-hidden text-left mt-8 mb-10">
       <div className="flex h-full flex-col">
         <div className="border-b border-border p-6">
           <div className="space-y-4">
             <div>
-              <h1 className="text-2xl font-semibold text-foreground">Logs</h1>
+              <h1 className="text-2xl font-semibold text-foreground">System Logs</h1>
               <p className="text-sm text-muted-foreground">
                 {filteredLogs.length} of {SAMPLE_LOGS.length} logs
               </p>
@@ -515,6 +527,6 @@ export function InteractiveLogsTable() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
