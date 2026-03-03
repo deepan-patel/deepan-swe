@@ -10,7 +10,7 @@ export default function ProjectsPage() {
 
 
     return (
-        <div className="relative z-10 pt-10 sm:pt-40 px-4 text-center mb-10">
+        <div className="px-4 text-center mb-10">
             <div className="max-w-4xl mx-auto mt-10 relative z-10">
 
                 {/* education */}

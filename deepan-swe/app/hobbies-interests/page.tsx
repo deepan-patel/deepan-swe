@@ -25,7 +25,7 @@ export default function HobbiesInterestsPage() {
     ]
 
     return (
-        <div className="relative z-10 pt-10 sm:pt-40 px-4 text-center mb-10">
+        <div className="px-4 text-center mb-10">
             <div className="max-w-4xl mx-auto mt-10 relative z-10">
 
                 <h1 className="mt-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
@@ -34,9 +34,8 @@ export default function HobbiesInterestsPage() {
                 </h1>
 
 
-
                 <div className="mt-2 flex flex-row mx-auto align-center justify-center">
-                    <Carousel className="w-full max-w-[12rem] sm:max-w-xs"
+                    <Carousel className="w-full sm:max-w-xs"
                         plugins={[
                             Autoplay({
                                 delay: 3000,
@@ -67,14 +66,7 @@ export default function HobbiesInterestsPage() {
 
                 <InteractiveLogsTable />
 
-
-
             </div>
-
-
-
-
-
 
         </div>
     )
