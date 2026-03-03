@@ -9,7 +9,7 @@ export default function Hero() {
 
             {/* Circular Profile Image */}
             <div className="relative flex justify-center">
-                <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl mt-12 sm:-mt-16">
+                <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-xl mt-8">
                     <Image
                         src="/images/landingImage.jpg"
                         alt="Profile"
