@@ -26,10 +26,10 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
 
     return (
-        <div className="w-full bg-background shadow-md p-5">
-            <div className="flex flex-row justify-between p-5 ">
+        <div className="w-full bg-background shadow-md p-5 md:p-10">
+            <div className="flex flex-row justify-between">
                 <Link href="/">
-                    <div className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
+                    <div className="flex sm:text-2xl text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight hover:scale-110 transition-all duration-300"> {ContactInfo.name} </div>
                 </Link>
 
                 {/* nav links and navigation bar */}

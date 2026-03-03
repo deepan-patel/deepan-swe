@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/web/theme/theme-provider"
 import Navbar from "@/components/web/navbar";
 import Footer from "@/components/web/footer";
 
+import ScrollToTop from "@/components/web/scrollToTop";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,6 +42,7 @@ export default function RootLayout({
             <Navbar />
           </header>
 
+          <ScrollToTop />
           {children}
 
           <footer>
