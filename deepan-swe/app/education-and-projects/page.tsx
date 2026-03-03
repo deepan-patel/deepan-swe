@@ -20,7 +20,7 @@ export default function ProjectsPage() {
                         <span className="text-orange-400">Education</span>
                     </h1>
 
-                    <div className="space-y-5">
+                    <div className="space-y-5 ">
                         {educationData.map((edu, index) => (
                             <div key={index}>
                                 <div className="flex flex-col">
@@ -71,14 +71,13 @@ export default function ProjectsPage() {
 
                 </div>
 
+                {/* projects */}
+                <div className="grid sm:grid-cols-2 gap-6 mb-10 mt-10 text-left">
+                    {projectData.map((project, index) => (
+                        <ProjectCard key={project.title} {...project} />
+                    ))}
+                </div>
 
-            </div>
-
-            {/* projects */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-10">
-                {projectData.map((project, index) => (
-                    <ProjectCard key={project.title} {...project} />
-                ))}
             </div>
 
 
