@@ -22,9 +22,10 @@ import { AboutMeLink } from "@/types";
 
 
 export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }) {
+    const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-        <Drawer>
+        <Drawer open={isOpen} onOpenChange={setIsOpen}>
 
             <div className="flex flex-row gap-2">
 
@@ -45,23 +46,26 @@ export default function HamberBurgerMenu({ aboutMe }: { aboutMe: AboutMeLink[] }
                     <div>
                         {/* add main drawer content here */}
                         <ul className="text-center flex flex-col gap-2">
-                            <ListItem href="/" title="Home"></ListItem>
+                            <ListItem href="/" title="Home" onClick={() => setIsOpen(false)}></ListItem>
 
                             {aboutMe.map((component) => (
                                 <ListItem
                                     key={component.title}
                                     title={component.title}
                                     href={component.href}
+                                    onClick={() => setIsOpen(false)}
                                 >
                                 </ListItem>
                             ))}
                         </ul>
                     </div>
                     <DrawerFooter className="flex flex-row justify-center">
-                        <Button>
-                            <Coffee data-icon="inline-end" />
-                            Coffee Chat
-                        </Button>
+                        <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat" onClick={() => setIsOpen(false)}>
+                            <Button>
+                                <Coffee data-icon="inline-end" />
+                                Coffee Chat
+                            </Button>
+                        </Link>
                         <DrawerClose asChild>
                             <Button variant="outline">Go Back</Button>
                         </DrawerClose>
