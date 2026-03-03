@@ -22,8 +22,8 @@ const TimelineItemContent = memo(function TimelineItemContent({ item }: Timeline
                         key={`${item.id}-resp-${idx}`}
                         className="flex text-left gap-3 text-sm text-slate-600 dark:text-slate-400"
                     >
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="leading-relaxed flex-grow">{responsibility}</span>
+                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0" />
+                        <span className="leading-relaxed grow">{responsibility}</span>
                     </li>
                 ))}
             </ul>
@@ -153,7 +153,7 @@ export function ProfessionalTimeline({
 // --- APP ENTRY POINT ---
 export default function TimelineSection() {
     return (
-        <div id="TimelineSection" className="min-h-screen p-4 sm:p-8">
+        <div id="TimelineSection" className="min-h-screen p-4 sm:p-8 scroll-mt-24 md:scroll-mt-32">
             <div className="max-w-3xl mx-auto">
                 <header className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100">Professional Experience</h1>

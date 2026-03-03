@@ -370,7 +370,7 @@ export default function OrbitingSkills() {
         <main className="w-full flex items-center justify-center overflow-hidden h-[350px] sm:h-[400px] md:h-[500px]">
 
             <div
-                className="relative w-[450px] h-[450px] flex items-center justify-center scale-[0.7] sm:scale-[0.85] md:scale-100 flex-shrink-0"
+                className="relative w-[450px] h-[450px] flex items-center justify-center scale-[0.7] sm:scale-[0.85] md:scale-100 shrink-0"
             >
 
                 {/* Central "Code" Icon with enhanced glow */}
