@@ -26,7 +26,7 @@ export default function ProjectsPage() {
                                 <div className="flex flex-col">
 
                                     <div className="flex flex-row justify-between">
-                                        <Link href={edu.url} className="font-semibold text-foreground hover:underline">
+                                        <Link href={edu.url} target="_blank" className="font-semibold text-foreground hover:underline">
                                             {edu.title}
                                         </Link>
                                         <span className="text-xs text-muted-foreground">

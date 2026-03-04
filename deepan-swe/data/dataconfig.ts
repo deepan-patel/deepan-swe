@@ -44,6 +44,11 @@ export const aboutMe: AboutMeLink[] = [
         href: "/hobbies-interests",
         description: "Learn more about my hobbies and interests.",
     },
+    {
+        title: "Freelance Work",
+        href: "https://calendly.com/deepanpatel/coffee-chat",
+        description: "Contact me for freelance work.",
+    },
 ];
 
 // Hero Data
@@ -126,7 +131,7 @@ export const projectData: ProjectItemData[] = [
     {
         title: "Protfolio Website",
         type: "Front-end",
-        url: "deepan-swe.vercel.app",
+        url: "https://deepan-swe.vercel.app",
         description: [
             "Developed a modern portfolio website to showcase my technical skills and projects while providing a reusable template for others to build their own professional presence.",
             "Built using Next.js 16, Tailwind CSS, shadcn/ui, and Framer Motion to deliver a responsive, animated, and scalable user experience."
