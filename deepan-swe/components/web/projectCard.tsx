@@ -25,7 +25,7 @@ export default function ProjectCard(project: ProjectItemData) {
                     {project.title}
                 </h3>
                 <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <Link href={project.url}>
+                    <Link href={project.url} target="_blank">
                         <ExternalLinkIcon className="sm:w-3 sm:h-3 md:w-5 md:h-5 hover:text-orange-400" />
                     </Link>
 
