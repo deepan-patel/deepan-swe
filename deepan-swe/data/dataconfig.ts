@@ -174,3 +174,10 @@ export const educationData: EducationItemData[] = [
         url: "https://www.credly.com/badges/b659e1c5-bef7-43ca-827b-e0d9fcd85b49/linked_in_profile"
     }
 ];
+
+// Hobbies and Interests
+export const motivationText: string[] = [
+    "I started programming in Grade 11 with Python, where I built my first game using Pygame. That experience sparked my interest in software development and set the foundation for my journey as an engineer.",
+    "I enjoy exploring new technologies and understanding how software continues to evolve. I’m always looking for ways to improve systems—making them more efficient, scalable, and easier to use.",
+    "With the rapid advancement of technology, especially in AI, I’m excited about what comes next. I’m driven by continuous learning and look forward to adapting, growing, and building solutions for the next generation of technology.",
+];
