@@ -253,11 +253,11 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
 
     return (
         <div
-            className="absolute top-1/2 left-1/2 transition-all duration-300 ease-out"
+            className="absolute top-1/2 left-1/2"
             style={{
                 width: `${size}px`,
                 height: `${size}px`,
-                transform: `translate(calc(${x}px - 50%), calc(${y}px - 50%))`,
+                transform: `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`,
                 zIndex: isHovered ? 20 : 10,
             }}
             onMouseEnter={() => setIsHovered(true)}
@@ -344,12 +344,13 @@ export default function OrbitingSkills() {
 
 
     useEffect(() => {
-
-
         let animationFrameId: number;
-        let lastTime = performance.now();
+        let lastTime: number | undefined;
 
         const animate = (currentTime: number) => {
+            if (lastTime === undefined) {
+                lastTime = currentTime;
+            }
             const deltaTime = (currentTime - lastTime) / 1000;
             lastTime = currentTime;
 

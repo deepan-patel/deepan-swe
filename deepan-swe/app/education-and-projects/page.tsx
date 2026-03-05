@@ -15,7 +15,7 @@ export default function ProjectsPage() {
 
                 {/* education */}
                 <div>
-                    <h1 className="mt-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
+                    <h1 className="mt-6 mb-6 text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
                         My{" "}
                         <span className="text-orange-400">Education</span>
                     </h1>
