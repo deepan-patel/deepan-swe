@@ -86,7 +86,7 @@ export default function Footer() {
                 </div>
                 <div className="space-y-4">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                        Contact Us
+                        Contact Me
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
                         {ContactInfo.address}

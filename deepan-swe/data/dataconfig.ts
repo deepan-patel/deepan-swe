@@ -46,7 +46,7 @@ export const aboutMe: AboutMeLink[] = [
     },
     {
         title: "Freelance Work",
-        href: "https://calendly.com/deepanpatel/coffee-chat",
+        href: "/freelance",
         description: "Contact me for freelance work.",
     },
 ];
@@ -180,4 +180,25 @@ export const motivationText: string[] = [
     "I started programming in Grade 11 with Python, where I built my first game using Pygame. That experience sparked my interest in software development and set the foundation for my journey as an engineer.",
     "I enjoy exploring new technologies and understanding how software continues to evolve. I’m always looking for ways to improve systems—making them more efficient, scalable, and easier to use.",
     "With the rapid advancement of technology, especially in AI, I’m excited about what comes next. I’m driven by continuous learning and look forward to adapting, growing, and building solutions for the next generation of technology.",
+];
+
+// Freelance Work
+export const freelanceWorkIntrests: string[] = [
+    "Azure",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "Next.js",
+    "TypeScript",
+    "Convex",
+    "PostgreSQL",
+    "Power BI",
+    "Tableau",
+    "Service Now",
+    "Ai Agents",
+    "SQL",
+    "Order Management System",
+    "Data Bricks",
+    "ETL Pipelines",
+    "Better-Auth"
 ];
