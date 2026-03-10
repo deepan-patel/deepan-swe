@@ -97,13 +97,22 @@ export default function Navbar() {
                                     </NavigationMenuContent>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink asChild
+                                    {/* <NavigationMenuLink asChild
                                         className={cn(
                                             navigationMenuTriggerStyle(),
                                             "rounded-l-none"
                                         )}
                                     >
                                         <Link target="_blank" href="/resume/Deepan_Patel_Resume.pdf">Resume</Link>
+                                    </NavigationMenuLink> */}
+
+                                    <NavigationMenuLink asChild
+                                        className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "rounded-l-none"
+                                        )}
+                                    >
+                                        <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat">Coffee Chat</Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -117,12 +126,12 @@ export default function Navbar() {
                 <div className="hidden md:flex gap-2">
                     <ThemeToggle />
 
-                    <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat">
+                    {/* <Link target="_blank" href="https://calendly.com/deepanpatel/coffee-chat">
                         <Button>
                             <Coffee data-icon="inline-end" />
                             Coffee Chat
                         </Button>
-                    </Link>
+                    </Link> */}
                 </div>
 
 
