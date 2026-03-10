@@ -7,6 +7,10 @@ import Footer from "@/components/web/footer";
 
 import ScrollToTop from "@/components/web/scrollToTop";
 
+// vercel analytics
+import { Analytics } from "@vercel/analytics/react"
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -44,6 +48,7 @@ export default function RootLayout({
 
           <ScrollToTop />
           {children}
+          <Analytics />
 
           <footer>
             <Footer />
