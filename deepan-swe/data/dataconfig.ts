@@ -200,5 +200,13 @@ export const freelanceWorkIntrests: string[] = [
     "Order Management System",
     "Data Bricks",
     "ETL Pipelines",
-    "Better-Auth"
+    "Better-Auth",
+    "Kafka",
+    "ETL",
+    "Spark",
+    "RHEL",
+    "Unix",
+    "Instana",
+    "New Relic",
+    "MQ"
 ];
