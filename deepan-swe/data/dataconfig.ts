@@ -156,7 +156,7 @@ export const educationData: EducationItemData[] = [
     {
         title: "Ontario Tech University",
         subtitle: "Bachelor of Computer Science",
-        duration: "Sep 2021 — Apr 2026",
+        duration: "Sep 2018 — May 2023",
         url: "https://ontariotechu.ca/"
     },
     {
