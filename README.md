@@ -30,8 +30,8 @@ Your feedback and support help prioritize improvements and future updates.
 
 ## 🌐 Live Demo
 
-🔗 **Live Site:** https://your-domain.vercel.app  
-*(Replace with your actual deployed URL)*
+🔗 **Live Site:** [https://deepan-swe.vercel.app/ ](https://deepan-swe.vercel.app/)
+
 
 ---
 
@@ -50,44 +50,16 @@ Your feedback and support help prioritize improvements and future updates.
 
 ```
 /public
-  /assets                # Static images and media files
+  /images                # Static images and media files
 
 /app
   /components
     /web                 # Custom reusable components
+
+
+/data
+  /dataconfig.ts         # All data is configured in the following file, please change data to your personal data when cloning the repo
 ```
-
-### 📌 Assets Folder
-
-All static images and media files are stored in:
-
-```
-/public/assets
-```
-
-You can reference them directly in your components:
-
-```tsx
-<Image src="/assets/profile.png" alt="Profile" width={200} height={200} />
-```
-
----
-
-### 📌 Custom Components
-
-All custom-built reusable components are located in:
-
-```
-/app/components/web
-```
-
-This includes:
-- Hero sections  
-- Cards  
-- Layout components  
-- Custom UI sections  
-
-Keeping components modular ensures scalability and maintainability.
 
 ---
 
@@ -170,51 +142,8 @@ Select:
 Navigate into the project:
 
 ```bash
-cd my-portfolio
+cd deepan-swe
 ```
-
----
-
-# 🎨 Tailwind CSS Setup (If Needed)
-
-If Tailwind is not installed:
-
-```bash
-pnpm add -D tailwindcss postcss autoprefixer
-pnpm dlx tailwindcss init -p
-```
-
-Ensure `tailwind.config.ts` includes:
-
-```ts
-content: [
-  "./app/**/*.{ts,tsx}",
-  "./components/**/*.{ts,tsx}",
-]
-```
-
----
-
-# 🧩 shadcn/ui Setup
-
-Initialize shadcn:
-
-```bash
-pnpm dlx shadcn@latest init
-```
-
-Follow prompts:
-- Select `app` directory
-- Choose TypeScript
-- Confirm Tailwind config location
-
-To add components:
-
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-Add any additional UI components as needed.
 
 ---
 
